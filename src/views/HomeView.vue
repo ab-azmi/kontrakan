@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main class="w-full h-full flex flex-col lg:flex-row gap-40 sm:gap-14">
-    <div class="h-full lg:w-[60%] flex flex-col justify-between lg:pl-10 pt-10">
+  <main class="w-full h-full flex flex-col lg:flex-row gap-14 lg:gap-0 justify-between">
+    <div class="h-fit lg:h-full lg:w-[60%] flex flex-col justify-between lg:pl-10 pt-10">
       <div>
         <h1 class="uppercase text-display font-semibold text-4xl">abdillah azmi</h1>
         <p class="text-white mt-1">
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div class="h-full lg:w-[40%] flex flex-col justify-between gap-16 lg:gap-0 items-center mt-16 lg:mt-0">
+    <div class="h-full lg:w-[30%] flex flex-col justify-between gap-16 lg:gap-0 items-center mt-16 lg:mt-0">
       <div class="">
         <div class="bg-white/10 p-6 rounded-full lg:rounded-none lg:rounded-b-full mt-0 lg:-mt-10 lg:h-[17rem] flex items-end">
           <div class="rounded-full w-40 overflow-hidden"><img src="@/assets/cat.jpg" alt="" srcset="" class="hover:scale-150 transition"></div>
