@@ -4,21 +4,20 @@ import { RouterLink, RouterView } from 'vue-router'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import {
   Bars3Icon,
-  CalendarIcon,
-  ChartPieIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
+  NewspaperIcon,
+  IdentificationIcon,
+  ChatBubbleLeftRightIcon,
+  BriefcaseIcon,
   HomeIcon,
-  UsersIcon,
   XMarkIcon,
 } from '@heroicons/vue/24/outline'
 
 const navigation = [
   { name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
-  { name: 'About', href: '/about', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '/portfolio', icon: FolderIcon, current: false },
-  { name: 'Blogs', href: '/blogs', icon: CalendarIcon, current: false },
-  { name: 'Contact', href: '/contact', icon: DocumentDuplicateIcon, current: false },
+  { name: 'About', href: '/about', icon: IdentificationIcon, current: false },
+  { name: 'Projects', href: '/portfolio', icon: BriefcaseIcon, current: false },
+  { name: 'Blogs', href: '/blogs', icon: NewspaperIcon, current: false },
+  { name: 'Contact', href: '/contact', icon: ChatBubbleLeftRightIcon, current: false },
 ]
 
 const sidebarOpen = ref<boolean>(false)
@@ -75,7 +74,7 @@ const sidebarOpen = ref<boolean>(false)
       <nav class=" flex flex-col justify-center">
         <ul role="list" class="flex flex-col items-center space-y-3">
           <li v-for="item in navigation" :key="item.name">
-            <RouterLink :to="item.href" class="text-gray-400 hover:text-white hover:bg-gray-800 group flex gap-x-3 rounded-md p-3 text-sm leading-6 font-semibold">
+            <RouterLink :to="item.href" class="text-gray-400 hover:text-primary hover:bg-slate-300 group flex gap-x-3 rounded-md p-3 text-sm leading-6 font-semibold">
               <component :is="item.icon" class="h-6 w-6 shrink-0" aria-hidden="true" />
               <span class="sr-only">{{ item.name }}</span>
             </RouterLink>

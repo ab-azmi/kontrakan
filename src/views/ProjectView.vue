@@ -1,0 +1,148 @@
+<script setup lang="ts">
+const projects = [
+    {
+        image: "./src/assets/projects/hris.png",
+        link: "",
+        name: "Human Resource Information System",
+        meta: "for PT Adi Sarana Armada Tbk - 2023",
+        description: "This is a project that i worked on during my internship program at PT Adi Sarana Armada Tbk. I used Laravel as back end, Vue JS as front end, and Inertia JS to bridge them. Everything from design to testing i do them my self with my mentors guidance",
+        tools: [
+            {
+                name: "Laravel",
+                color: "red"
+            },
+            {
+                name: "VueJS",
+                color: "green",
+            },
+            {
+                name: "InertiaJS",
+                color: "purple"
+            },
+            {
+                name: "TailwindCSS",
+                color: "blue"
+            }
+        ]
+    }, {
+        image: "./src/assets/projects/astral.png",
+        link: "http://erp.alluresystem.site/login",
+        name: "ERP Sales Management System",
+        meta: "for PT Allure Industries - 2022",
+        description: "I made this system during my internship at PT Allure Industries. It is part of larger ERP ecosystem. This one was build to help them to monitor and manage sales activities. I made this with my team from the same University.",
+        tools: [
+            {
+                name: "Laravel",
+                color: "red"
+            },
+            {
+                name: "TailwindCSS",
+                color: "blue"
+            },
+            {
+                name: "Git",
+                color: "orange"
+            }
+        ]
+    }, {
+        image: "./src/assets/projects/survey.png",
+        link: "https://github.com/ab-azmi/laravel-vue-survey",
+        name: "Survey Web App",
+        meta: "for Hobby project",
+        description: "This project was made when i started learning Vue JS. Survey App allow users to make, monitor, and share survey form. I took advantage of reusable component from Vue JS and REST API from Laravel.",
+        tools: [
+            {
+                name: "Laravel",
+                color: "red"
+            },
+            {
+                name: "TailwindCSS",
+                color: "blue"
+            },
+            {
+                name: "VueJs",
+                color: "green"
+            },
+        ]
+    },
+    {
+        image: "./src/assets/projects/tugas.png",
+        link: "https://github.com/ab-azmi/manajemen-orientasi",
+        name: "Students Assignment Web App",
+        meta: "for Hobby project",
+        description: "This is a project that allow users to make, manage, and monitor their assignment. I made this project to learn more about advanced Eloquent ORM, complex database, and Livewire using Laravel Framework.",
+        tools: [
+            {
+                name: "Laravel",
+                color: "red"
+            },
+            {
+                name: "TailwindCSS",
+                color: "blue"
+            },
+            {
+                name: "Livewire",
+                color: "pink"
+            },
+        ]
+    },
+    {
+        image: "./src/assets/projects/portfolio.png",
+        link: "https://dribbble.com/shots/16743976-Portfolio-Design/attachments/11790523?mode=media",
+        name: "Portfolio UI Design",
+        meta: "for Hobby project",
+        description: "This one is different. Back then i thought my passion is UI/UX, so i made this and post in on dribble. Later i found out that coding is more fun and challenging. So i shift toward web development. I can still designing, but not in advance level.",
+        tools: [
+            {
+                name: "VueJS",
+                color: "green"
+            },
+            {
+                name: "TailwindCSS",
+                color: "blue"
+            },
+            {
+                name: "Figma",
+                color: "gray"
+            },
+        ]
+    }
+]
+</script>
+
+<template>
+    <main class="px-7">
+        <h1 class="text-3xl text-display mb-10">Projects</h1>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-9">
+            <div v-for="project in projects" :key="project.name"
+                class="w-full flex flex-col rounded-lg bg-white/20 backdrop-blur-md h-fit">
+                <div class="p-5 rounded-t-lg">
+                    <div class="overflow-hidden w-full rounded-lg">
+                        <img :src="project.image" :alt="project.name" />
+                    </div>
+                </div>
+                <div class=" px-5">
+                    <a target="_blank" :href="project.link" class="text-white text-lg font-semibold">{{ project.name }}</a>
+                    <p class="italic text-sm text-white/30">{{ project.meta }}</p>
+                    <p class="text-sm text-white mt-3">
+                        {{ project.description }}
+                    </p>
+                </div>
+                <div class="rounded-b-lg px-5 py-8 flex flex-wrap gap-2">
+                    <span v-for="tool in project.tools" :key="tool.name"
+                        :class="tool.color == 'red' ? 'bg-red-300 text-red-900' : tool.color == 'blue' ? 'bg-blue-300 text-blue-900' : tool.color == 'green' ? 'bg-green-300 text-green-900' : tool.color == 'purple' ? 'bg-purple-300 text-purple-900' : tool.color == 'orange' ? 'bg-orange-300 text-orange-900' : tool.color == 'pink' ? 'bg-pink-300 text-pink-900' : tool.color == 'gray' ? 'bg-gray-300 text-gray-900' : ''"
+                        class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium">
+                        <svg 
+                            class="h-1.5 w-1.5" 
+                            :class="tool.color == 'red' ? 'fill-red-900' : tool.color == 'blue' ? 'fill-blue-900' : tool.color == 'green' ? 'fill-green-900' : tool.color == 'purple' ? 'fill-purple-900' : tool.color == 'orange' ? 'fill-orange-900' : tool.color == 'pink' ? 'fill-pink-900' : tool.color == 'gray' ? 'fill-gray-900' : ''"
+                            viewBox="0 0 6 6"
+                            aria-hidden="true">
+                            <circle cx="3" cy="3" r="3" />
+                        </svg>
+                        {{ tool.name }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+</template>
