@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const projects = [
     {
-        image: "./src/assets/projects/hris.png",
+        image: "./images/projects/hris.png",
         link: "",
         name: "Human Resource Information System",
         meta: "for PT Adi Sarana Armada Tbk - 2023",
@@ -25,7 +25,7 @@ const projects = [
             }
         ]
     }, {
-        image: "./src/assets/projects/astral.png",
+        image: "./images/projects/astral.png",
         link: "http://erp.alluresystem.site/login",
         name: "ERP Sales Management System",
         meta: "for PT Allure Industries - 2022",
@@ -45,7 +45,7 @@ const projects = [
             }
         ]
     }, {
-        image: "./src/assets/projects/survey.png",
+        image: "./images/projects/survey.png",
         link: "https://github.com/ab-azmi/laravel-vue-survey",
         name: "Survey Web App",
         meta: "for Hobby project",
@@ -66,7 +66,7 @@ const projects = [
         ]
     },
     {
-        image: "./src/assets/projects/tugas.png",
+        image: "./images/projects/tugas.png",
         link: "https://github.com/ab-azmi/manajemen-orientasi",
         name: "Students Assignment Web App",
         meta: "for Hobby project",
@@ -87,7 +87,7 @@ const projects = [
         ]
     },
     {
-        image: "./src/assets/projects/portfolio.png",
+        image: "./images/projects/portfolio.png",
         link: "https://dribbble.com/shots/16743976-Portfolio-Design/attachments/11790523?mode=media",
         name: "Portfolio UI Design",
         meta: "for Hobby project",
@@ -122,7 +122,7 @@ const projects = [
                     </div>
                 </div>
                 <div class=" px-5">
-                    <a target="_blank" :href="project.link" class="text-white text-lg font-semibold">{{ project.name }}</a>
+                    <a target="_blank" :href="project.link" class="text-white text-lg font-semibold hover:text-display transition-colors">{{ project.name }}</a>
                     <p class="italic text-sm text-white/30">{{ project.meta }}</p>
                     <p class="text-sm text-white mt-3">
                         {{ project.description }}
