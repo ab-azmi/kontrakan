@@ -7,7 +7,7 @@ const store = useArticleStore();
 //make computed property reactive
 const articles = ref();
 
-onMounted(() => { 
+onMounted(async () => { 
     //subscribe to articles data so that it always updates
     store.subscribeToArticles();
     
@@ -17,7 +17,7 @@ onMounted(() => {
         store.setArticles(JSON.parse(localStorage.getItem('articles')!));
     }else{
         //if not, fetch from api   
-        store.fetchArticles();
+        await store.fetchArticles();
     }
     //set get the articles from the store
     articles.value = store.articles;
