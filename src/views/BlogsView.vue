@@ -1,9 +1,28 @@
 <script setup lang="ts">
 import { useArticleStore } from '@/stores/article';
+import {onMounted, ref} from 'vue';
+import { formatDate } from '@/lib/momentFunc';
 
 const store = useArticleStore();
+//make computed property reactive
+const articles = ref();
 
-const articles = store.articles
+onMounted(() => { 
+    //subscribe to articles data so that it always updates
+    store.subscribeToArticles();
+    
+    //check if there is 'article' in local storage
+    if (localStorage.getItem('articles')) {
+        //if there is, set it to the store
+        store.setArticles(JSON.parse(localStorage.getItem('articles')!));
+    }else{
+        //if not, fetch from api   
+        store.fetchArticles();
+    }
+    //set get the articles from the store
+    articles.value = store.articles;
+})
+
 </script>
 
 <template>
@@ -19,7 +38,7 @@ const articles = store.articles
                 </div>
                 <div>
                     <div class="rounded-b-lg px-5 pb-3 flex flex-wrap gap-2">
-                        <span v-for="tag in article.tags" :key="tag"
+                        <span v-for="tag in article.tags.value" :key="tag"
                             class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium bg-primary text-display">
                             <svg class="h-1.5 w-1.5 fill-white animate-pulse" viewBox="0 0 6 6" aria-hidden="true">
                                 <circle cx="3" cy="3" r="3" />
@@ -27,9 +46,9 @@ const articles = store.articles
                             {{ tag }}
                         </span>
                     </div>
-                    <div class=" px-5">
+                    <div class=" px-5 pb-3">
                         <h1 class="text-white text-lg font-semibold">{{ article.title }}</h1>
-                        <p class="italic text-sm text-white/30">{{ article.created }}</p>
+                        <p class="italic text-sm text-white/30">{{ formatDate(article.created_at) }}</p>
 
                     </div>
                 </div>

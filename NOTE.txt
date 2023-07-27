@@ -1,0 +1,16 @@
+typing DB from supabase into Vue 3 project (typescript) : https://supabase.com/docs/guides/api/rest/generating-types
+ - Need Project id
+ - install supabase CLI
+ - access token from Project setting to login
+
+
+Watch Realtime Changes by Subscribe to DB Supabase : 
+ - https://dev.to/ftonato/realtime-subscriptions-using-vue-supabase-1e11
+ - https://supabase.com/docs/reference/javascript/removechannel
+
+My Subscribe Method:
+ > Make function subscribe inside store pinia
+ > call that function everytime component (list) is mounted
+
+
+Save image inside supabase bucket : https://supabase.com/docs/guides/storage/image-transformations
