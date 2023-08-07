@@ -14,3 +14,7 @@ My Subscribe Method:
 
 
 Save image inside supabase bucket : https://supabase.com/docs/guides/storage/image-transformations
+
+
+Vue Project that use Vue Router need to rewrite vercel config. 
+The conf is inside vercel.json file.

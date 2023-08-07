@@ -35,6 +35,12 @@ const router = createRouter({
       props: true
     },
     {
+      path: '/blogs/create',
+      name: 'blogs.create',
+      component: () => import('@/views/CreateBlogView.vue'),
+      props: true
+    },
+    {
       path: '/contact',
       name: 'contact',
       component: HomeView
