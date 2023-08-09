@@ -7,7 +7,7 @@ import {
   Bars3Icon,
   NewspaperIcon,
   IdentificationIcon,
-  ChatBubbleLeftRightIcon,
+  PhotoIcon,
   BriefcaseIcon,
   HomeIcon,
   XMarkIcon,
@@ -18,7 +18,7 @@ const navigation = [
   { name: 'About', href: '/about', icon: IdentificationIcon, current: false },
   { name: 'Projects', href: '/portfolio', icon: BriefcaseIcon, current: false },
   { name: 'Blogs', href: '/blogs', icon: NewspaperIcon, current: false },
-  { name: 'Contact', href: '/contact', icon: ChatBubbleLeftRightIcon, current: false },
+  { name: 'Gallery', href: '/gallery', icon: PhotoIcon, current: false },
 ]
 
 const authStore = useAuthStore()

@@ -44,9 +44,9 @@ const router = createRouter({
 
     },
     {
-      path: '/contact',
-      name: 'contact',
-      component: HomeView,
+      path: '/gallery',
+      name: 'gallery',
+      component: () => import('@/views/GalleryView.vue'),
     },
     {
       path: '/login',
@@ -58,7 +58,6 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore()
-  console.log(authStore.authenticated, authStore.user)
   
   if (authStore.authenticated === false && to.meta.requiresAuth) {
     //if user is not logged in, redirect to login page
