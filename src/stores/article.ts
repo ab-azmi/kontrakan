@@ -28,13 +28,13 @@ export const useArticleStore = defineStore('article', () => {
     articles.value = data
   }
 
-  async function createArticle(article: Article): Promise<void> {
+  async function createArticle(article: any): Promise<void> {
     //upload image into supabase storage
     const imageName = article.image?.name + uuidv4()
 
     await supabase.storage
       .from('images')
-      .upload('blogs/' + imageName, article.image, {
+      .upload('blogs/' + imageName, article?.image, {
         cacheControl: '3600',
         upsert: false
       })

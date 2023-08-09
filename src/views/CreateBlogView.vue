@@ -74,6 +74,19 @@ function publishArticle() {
             //alert
             alert('Article created')
             //reset the form
+            form.value = {
+                title: '',
+                content: '',
+                image: '',
+                created_at: '',
+                tags: {
+                    value: [],
+                }
+            }
+        })
+        .catch((err) => {
+            loading.value = false
+            alert(err)
         })
 }
 
