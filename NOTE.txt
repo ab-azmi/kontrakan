@@ -18,3 +18,5 @@ Save image inside supabase bucket : https://supabase.com/docs/guides/storage/ima
 
 Vue Project that use Vue Router need to rewrite vercel config. 
 The conf is inside vercel.json file.
+
+vue3 TinyMCE Example : https://codesandbox.io/s/vue3-tinymce-vjh4l?file=/src/components/myEditor/index.vue:2228-2945

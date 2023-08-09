@@ -28,7 +28,7 @@ onMounted(async () => {
 <template>
     <main class="px-7 py-5">
         <div class="flex w-full justify-end">
-            <button class="block lg:hidden mb-3 px-4 py-2 text-primary rounded-md font-bold bg-display">back</button>
+            <RouterLink :to="{name:'blogs'}" class="block lg:hidden mb-3 px-4 py-2 text-primary rounded-md font-bold bg-display">back</RouterLink>
         </div>
         <div class="flex flex-col items-center px-14 lg:px-32 justify-center w-full gap-3 relative top-5">
             <span class="text-display font-semibold">{{ formatDate(article?.created_at) }}</span>
@@ -47,7 +47,7 @@ onMounted(async () => {
         </div>
 
         <div class="w-[100%] rounded-lg mt-16 lg:mt-32 px-14 lg:px-32 py-8 text-white font-semibold">
-            {{ article?.content }}
+            <div v-html="article?.content"></div>
         </div>
     </main>
 </template>

@@ -2,7 +2,10 @@
 import Editor from '@tinymce/tinymce-vue'
 import { v4 as uuidv4 } from "uuid"
 import { useTinymceStore } from '@/stores/tinymce'
+import { useArticleStore } from '@/stores/article'
 import { ref, watch } from 'vue';
+import { useAuthStore } from '@/stores/auth';
+import { useRouter } from 'vue-router';
 
 interface Article {
     title: string,
@@ -14,6 +17,9 @@ interface Article {
     }
 }
 
+const authStore = useAuthStore();
+const router = useRouter();
+
 const form = ref<Article>({
     title: '',
     content: '',
@@ -24,7 +30,8 @@ const form = ref<Article>({
     }
 })
 const tags = ref<string>()
-const store = useTinymceStore();
+const storeTinyMCE = useTinymceStore();
+const storeArticle = useArticleStore();
 const loading = ref<boolean>(false)
 const fileInput = ref<HTMLInputElement>()
 const tempFile = ref<string>()
@@ -51,7 +58,7 @@ function onFileChange(event: any) {
 async function imageUploadHandler(blobinfo: any, success: any, failure: any) {
     const filename = blobinfo.filename() + uuidv4()
 
-    const path = await store.uploadImage(filename, blobinfo.blob())
+    const path = await storeTinyMCE.uploadImage(filename, blobinfo.blob())
     if (path !== '') {
         success(path)
     } else {
@@ -59,10 +66,28 @@ async function imageUploadHandler(blobinfo: any, success: any, failure: any) {
     }
 }
 
-async function publishArticle() {
+function publishArticle() {
     loading.value = true
-    console.log(form.value)
-    loading.value = false
+    storeArticle.createArticle(form.value)
+        .then(() => {
+            loading.value = false
+            //alert
+            alert('Article created')
+            //reset the form
+        })
+}
+
+function removeImage() {
+    form.value.image = ''
+    tempFile.value = ''
+}
+
+async function Logout(){
+    await authStore.logout()
+        .then(() => {
+            localStorage.removeItem('user')
+            router.push('/login')
+        })
 }
 
 watch(tags, (newValue) => {
@@ -74,6 +99,11 @@ watch(tags, (newValue) => {
 
 <template>
     <main class="px-7 py-5">
+        <div class="my-4 w-full flex justify-end">
+            <button class="px-4 py-2 rounded-md bg-red-500 text-white" @click="Logout">
+                <span>Logout</span>
+            </button>
+        </div>
         <div class="flex flex-col gap-4">
             <div>
                 <label for="email" class="block text-sm font-medium leading-6 text-white">Title</label>
@@ -101,7 +131,10 @@ watch(tags, (newValue) => {
             </div>
             <div v-else>
                 <label for="image" class="block text-sm font-medium leading-6 text-white">Cover</label>
-                <div>
+                <div class="relative">
+                    <div class="absolute">
+                        <button class="px-4 py-2 bg-display rounded-br-md" @click.prevent="removeImage">Remove</button>
+                    </div>
                     <img :src="tempFile" alt="" srcset="" width="400" class="rounded-md">
                     <!-- Make remove image button -->
                 </div>
@@ -130,8 +163,8 @@ watch(tags, (newValue) => {
                     ],
                     toolbar:
                         'undo redo | formatselect | bold italic backcolor | \
-                                                                                                        alignleft aligncenter alignright alignjustify | \
-                                                                                                        bullist numlist outdent indent | removeformat | image | help'
+                                                                                                                        alignleft aligncenter alignright alignjustify | \
+                                                                                                                        bullist numlist outdent indent | removeformat | image | help'
                 }" />
             </div>
             <div class="mt-5">

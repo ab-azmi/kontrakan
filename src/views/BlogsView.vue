@@ -32,8 +32,8 @@ onMounted(async () => {
             <div v-for="article in articles" :key="article.id"
                 class="w-full flex flex-col rounded-lg bg-white/20 backdrop-blur-md h-full justify-between">
                 <div class="px-5 py-5 rounded-t-lg">
-                    <div class="overflow-hidden w-full rounded-lg">
-                        <img :src="article.image" :alt="article.title" />
+                    <div class="overflow-hidden w-full rounded-lg flex items-center max-h-56">
+                        <img :src="article.image" :alt="article.title" class=""/>
                     </div>
                 </div>
                 <div>
