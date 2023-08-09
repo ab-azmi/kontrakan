@@ -5,7 +5,10 @@ import { onMounted } from 'vue'
 const store = useGalleryStore()
 
 onMounted(async () => {
-    await store.fetchImages()
+    //if images in store empty, fetch again
+    if (store.images.length === 0){
+        await store.fetchImages()
+    }
 })
 </script>
 

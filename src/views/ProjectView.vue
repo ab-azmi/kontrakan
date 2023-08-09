@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const projects = [
     {
-        image: "./images/projects/hris.png",
+        image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/hris.png",
         link: "",
         name: "Human Resource Information System",
         meta: "for PT Adi Sarana Armada Tbk - 2023",
@@ -25,7 +25,7 @@ const projects = [
             }
         ]
     }, {
-        image: "./images/projects/astral.png",
+        image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/astral.png",
         link: "http://erp.alluresystem.site/login",
         name: "ERP Sales Management System",
         meta: "for PT Allure Industries - 2022",
@@ -45,7 +45,7 @@ const projects = [
             }
         ]
     }, {
-        image: "./images/projects/survey.png",
+        image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/survey.png",
         link: "https://github.com/ab-azmi/laravel-vue-survey",
         name: "Survey Web App",
         meta: "for Hobby project",
@@ -66,7 +66,7 @@ const projects = [
         ]
     },
     {
-        image: "./images/projects/tugas.png",
+        image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/tugas.png",
         link: "https://github.com/ab-azmi/manajemen-orientasi",
         name: "Students Assignment Web App",
         meta: "for Hobby project",
@@ -87,7 +87,7 @@ const projects = [
         ]
     },
     {
-        image: "./images/projects/portfolio.png",
+        image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/portfolio.png",
         link: "https://dribbble.com/shots/16743976-Portfolio-Design/attachments/11790523?mode=media",
         name: "Portfolio UI Design",
         meta: "for Hobby project",
