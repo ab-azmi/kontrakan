@@ -13,8 +13,8 @@ export const useArticleStore = defineStore('article', () => {
 
   const getArticles = computed(() => articles.value)
 
-  function readArticle(id: number): void {
-    const article = articles.value?.find((article) => article.id === id)
+  function readArticle(slug: string): void {
+    const article = articles.value?.find((article) => article.slug === slug)
     selectedArticle.value = article
   }
 
@@ -50,6 +50,7 @@ export const useArticleStore = defineStore('article', () => {
             content: article.content,
             image: article.image,
             tags: article.tags,
+            slug: article.title.toLowerCase().replace(/\W+/g, '-'),
           })
           .then(() => {
             fetchArticles()

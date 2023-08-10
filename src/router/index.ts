@@ -30,16 +30,15 @@ const router = createRouter({
       component: () => import('@/views/BlogsView.vue'),
     },
     {
-      path: '/blogs/read/:id',
+      path: '/blogs/read/:slug',
       name: 'blogs.read',
       component: () => import('@/components/ArticleComp.vue'),
-      props: true
+      props: true,
     },
     {
       path: '/blogs/create',
       name: 'blogs.create',
       component: () => import('@/views/CreateBlogView.vue'),
-      props: true,
       meta: { requiresAuth: true}
 
     },

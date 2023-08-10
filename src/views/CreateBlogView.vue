@@ -12,6 +12,7 @@ interface Article {
     content: string,
     image: string,
     created_at: string,
+    slug: string,
     tags: {
         value: string[],
     }
@@ -25,6 +26,7 @@ const form = ref<Article>({
     content: '',
     image: '',
     created_at: '',
+    slug: '',
     tags: {
         value: [],
     }
@@ -78,6 +80,7 @@ function publishArticle() {
                 title: '',
                 content: '',
                 image: '',
+                slug: '',
                 created_at: '',
                 tags: {
                     value: [],

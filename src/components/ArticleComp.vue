@@ -5,7 +5,7 @@ import type { Article } from '@/types/article';
 import { formatDate } from '@/lib/momentFunc';
 
 interface Props {
-    id: string,
+    slug: string,
 }
 
 const props = defineProps<Props>()
@@ -17,7 +17,7 @@ onMounted(async () => {
     await store.fetchArticles();
 
     //get the article with the id from the route params
-    store.readArticle(parseInt(props.id));
+    store.readArticle(props.slug);
 
     //get the selected article from store
     article.value = store.selectedArticle;

@@ -23,6 +23,7 @@ onMounted(async () => {
     articles.value = store.articles;
 })
 
+
 </script>
 
 <template>
@@ -54,7 +55,7 @@ onMounted(async () => {
                 </div>
 
                 <div class="px-5 pb-5 flex justify-end">
-                    <RouterLink :to="{name: 'blogs.read', params: {id: article.id}}" class=" px-4 py-2 font-semibold bg-primary text-display rounded-md">
+                    <RouterLink :to="{name: 'blogs.read', params: {slug: article.slug}}" class=" px-4 py-2 font-semibold bg-primary text-display rounded-md">
                         read <span class="font-bold">&rarr;</span>
                     </RouterLink>
                 </div>
