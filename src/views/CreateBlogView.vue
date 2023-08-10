@@ -98,7 +98,7 @@ function removeImage() {
     tempFile.value = ''
 }
 
-async function Logout(){
+async function Logout() {
     await authStore.logout()
         .then(() => {
             localStorage.removeItem('user')
@@ -179,8 +179,8 @@ watch(tags, (newValue) => {
                     ],
                     toolbar:
                         'undo redo | formatselect | bold italic backcolor | \
-                                                                                                                        alignleft aligncenter alignright alignjustify | \
-                                                                                                                        bullist numlist outdent indent | removeformat | image | help'
+                         alignleft aligncenter alignright alignjustify | \
+                         bullist numlist outdent indent | removeformat | image link | help'
                 }" />
             </div>
             <div class="mt-5">
