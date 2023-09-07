@@ -73,4 +73,23 @@ onMounted(async () => {
 .content img{
     border-radius: 15px;
 }
+
+.content a{
+    font-style: italic;
+    color: #ffb35f;
+}
+
+.content ul li{
+    font-size: large;
+    font-weight: normal;
+    font-family: sans-serif;
+    line-height: 40px;
+}
+.content ul li::before{
+    content: "•";
+    color: #ffb35f;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
 </style>
