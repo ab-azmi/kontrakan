@@ -10,7 +10,7 @@ export const useGalleryStore = defineStore('gallery', () => {
   async function fetchImages(): Promise<void> {
     await supabase.storage
       .from('images')
-      .list('gallery', { limit: 100 })
+      .list('gallery')
       .then((response) => {
         if (response.data) {
           response.data.map((image) => {

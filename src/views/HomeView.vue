@@ -36,7 +36,7 @@
     <div class="h-full lg:w-[30%] flex flex-col justify-between gap-16 lg:gap-0 items-center mt-16 lg:mt-0">
       <div class="">
         <div class="bg-white/10 p-6 rounded-full lg:rounded-none lg:rounded-b-full mt-0 lg:-mt-10 lg:h-[17rem] flex items-end">
-          <div class="rounded-full w-40 overflow-hidden"><img src="https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/cat.jpg" alt="" srcset="" class="hover:scale-150 transition"></div>
+          <div class="rounded-full w-40 overflow-hidden"><img src="https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/profile.jpg" alt="" srcset="" class="hover:scale-150 transition"></div>
         </div>
       </div>
       <div class="flex flex-col gap-8 items-center">
