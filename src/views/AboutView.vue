@@ -1,3 +1,35 @@
+<script setup lang="ts">
+import {
+  AcademicCapIcon,
+  CommandLineIcon,
+  FireIcon
+} from '@heroicons/vue/20/solid'
+
+const schools = [
+  {
+    name: { name: 'Universitas Negeri Semarang', href: '#' },
+    icon: AcademicCapIcon,
+    description:
+      'Finally, i go to colleges, in another city. My major is Computer Science but my focus area is Web Developer. I met new freinds and teachers. They are so smart and motivated, unlike me lazy. In colleges i was able to join multiple internship program as a Web Developer. I was so grateful',
+    period: '2020 - present'
+  },
+  {
+    name: { name: 'Bangkit Academy by Google, GoTo, & Traveloka', href: '#' },
+    icon: FireIcon,
+    description:
+      'Finally, i go to colleges, in another city. My major is Computer Science but my focus area is Web Developer. I met new freinds and teachers. They are so smart and motivated, unlike me lazy. In colleges i was able to join multiple internship program as a Web Developer. I was so grateful',
+    period: 'Aug - Dec 2023'
+  },
+  {
+    name: { name: 'SMK Negeri 1 Wonosobo', href: '#' },
+    icon: CommandLineIcon,
+    description:
+      'High school. Finally i decided to leave that jungle and go to the city across the sea. I was accepted in a great Vocational High School, majoring Software Engineering. My close friends was small, only 3 or 4. I learn a lot from my teachers and friends. I was happy but sometimes got depressed too, teenage problem',
+    period: '2017 - 2020'
+  },
+]
+</script>
+
 <template>
   <div class="flex px-7 py-5 gap-20 flex-col lg:flex-row">
     <div class="flex-1 relative">
@@ -50,6 +82,8 @@
           <a href="https://git-scm.com/" target="_blank"><img src="@/assets/logos/git.png" alt="" class="w-14"></a>
           <a href="https://www.postgresql.org/" target="_blank"><img src="@/assets/logos/postgresql.png" alt="" class="w-14"></a>
           <a href="https://inertiajs.com/" target="_blank"><img src="@/assets/logos/inertiajs.png" alt="" class="w-14"></a>
+          <a href="https://alpinejs.dev" target="_blank"><img src="@/assets/logos/alpine.svg" alt="" class="w-14"></a>
+          <a href="https://nuxt.com" target="_blank"><img src="@/assets/logos/nuxt.png" alt="" class="w-14"></a>
         </div>
       </div>
     </div>
@@ -91,44 +125,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import {
-  AcademicCapIcon,
-  CodeBracketIcon,
-  HeartIcon,
-  PuzzlePieceIcon
-} from '@heroicons/vue/20/solid'
-
-const schools = [
-  {
-    name: { name: 'Universitas Negeri Semarang', href: '#' },
-    icon: AcademicCapIcon,
-    description:
-      'Finally, i go to colleges, in another city. My major is Computer Science but my focus area is Web Developer. I met new freinds and teachers. They are so smart and motivated, unlike me lazy. In colleges i was able to join multiple internship program as a Web Developer. I was so grateful',
-    period: '2020 - present'
-  },
-  {
-    name: { name: 'SMK Negeri 1 Wonosobo', href: '#' },
-    icon: CodeBracketIcon,
-    description:
-      'High school. Finally i decided to leave that jungle and go to the city across the sea. I was accepted in a great Vocational High School, majoring Software Engineering. My close friends was small, only 3 or 4. I learn a lot from my teachers and friends. I was happy but sometimes got depressed too, teenage problem',
-    period: '2017 - 2020'
-  },
-  {
-    name: { name: 'SMP Kridatama Lancar 1', href: '#' },
-    icon: HeartIcon,
-    description:
-      "High school. Yes, i'm still in that jungle. Everything just got better then. I got my first phone, first laptop, and my first girlfriend (we both rank 1 & 2 in every class). I love to play football, volleyball, and swimming. The sad part was my friends start decreasing one-by-one, they leave me to get better life outside the jungle.",
-    period: '2014 - 2017'
-  },
-
-  {
-    name: { name: 'SD Kridatama Lancar 1', href: '#' },
-    icon: PuzzlePieceIcon,
-    description:
-      'This is my elementary school. Back then i was living in deep jungle in Borneo Island. Electricity only at night, water is limited, and internet is hard to get. In spite all of that, i was so much happier back then. I still have a lot of friends',
-    period: '2008 - 2014'
-  }
-]
-</script>
