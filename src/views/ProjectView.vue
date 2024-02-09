@@ -1,8 +1,41 @@
 <script setup lang="ts">
 const projects = [
+{
+        image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/pawra.png",
+        link: "https://github.com/pawra-id",
+        name: "PAWRA (Pet Anxiety and Welfare Robust Analyzer)",
+        meta: "for Bangkit Academy by Google, GoTo, & Traveloka - 2023",
+        description: "THE MOST COMPLEX PROJECT so far. I made this project with my team from Bangkit Academy. We build a web app that can analyze pet's anxiety and welfare. We use FastAPI as back end and Android App (Jetpack Compose) as front end. We also use Tensorflow to build the model. We deploy the app on Google Cloud Platform. We won the top 50 out of 639 teams. I was so happy and proud of my team. It was a great experience.",
+        tools: [
+            {
+                name: "FastAPI",
+                color: "gray"
+            },
+            {
+                name: "Nuxt JS",
+                color: "green",
+            },
+            {
+                name: "TailwindCSS",
+                color: "blue"
+            },
+            {
+                name: "Kotlin",
+                color: "purple"
+            },
+            {
+                name: "Tensorflow",
+                color: "orange"
+            },
+            {
+                name: "Google Cloud Platform",
+                color: "pink"
+            }
+        ]
+    },
     {
         image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/hris.png",
-        link: "",
+        link: "https://github.com/ab-azmi/hris_app",
         name: "Human Resource Information System",
         meta: "for PT Adi Sarana Armada Tbk - 2023",
         description: "This is a project that i worked on during my internship program at PT Adi Sarana Armada Tbk. I used Laravel as back end, Vue JS as front end, and Inertia JS to bridge them. Everything from design to testing i do them my self with my mentors guidance",
@@ -117,12 +150,12 @@ const projects = [
             <div v-for="project in projects" :key="project.name"
                 class="w-full flex flex-col rounded-lg bg-white/20 backdrop-blur-md h-fit">
                 <div class="p-5 rounded-t-lg">
-                    <div class="overflow-hidden w-full rounded-lg">
-                        <img :src="project.image" :alt="project.name" />
+                    <div class="overflow-hidden w-full rounded-lg h-52">
+                        <img :src="project.image" :alt="project.name"/>
                     </div>
                 </div>
                 <div class=" px-5">
-                    <a target="_blank" :href="project.link" class="text-white text-lg font-semibold hover:text-display transition-colors">{{ project.name }}</a>
+                    <a target="_blank" :href="project.link" class="text-white text-lg font-semibold hover:text-display transition-colors">{{ project.name }} &rarr;</a>
                     <p class="italic text-sm text-white/30">{{ project.meta }}</p>
                     <p class="text-sm text-white mt-3">
                         {{ project.description }}
