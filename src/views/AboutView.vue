@@ -10,14 +10,14 @@ const schools = [
     name: { name: 'Universitas Negeri Semarang', href: '#' },
     icon: AcademicCapIcon,
     description:
-      'Finally, i go to colleges, in another city. My major is Computer Science but my focus area is Web Developer. I met new freinds and teachers. They are so smart and motivated, unlike me lazy. In colleges i was able to join multiple internship program as a Web Developer. I was so grateful',
+      'Finally, i go to college, in another city. My major is Computer Science but my focus area is Web Developer. I met new freinds and teachers. They are so smart and motivated, unlike me lazy. In colleges i was able to join multiple internship program as a Web Developer. I was so grateful',
     period: '2020 - present'
   },
   {
     name: { name: 'Bangkit Academy by Google, GoTo, & Traveloka', href: '#' },
     icon: FireIcon,
     description:
-      'Finally, i go to colleges, in another city. My major is Computer Science but my focus area is Web Developer. I met new freinds and teachers. They are so smart and motivated, unlike me lazy. In colleges i was able to join multiple internship program as a Web Developer. I was so grateful',
+      'I was accepted in a great academy, Bangkit Academy. I was so happy and proud of my self. I was able to learn a lot of things, not only machine learning, but also a bit of mobile development and cloud management from my team. I was able to build a great project with my team and won the top 50 out of 639 teams. As a project manager and backend developer, it was a great experience. I was so happy and proud of my team',
     period: 'Aug - Dec 2023'
   },
   {
@@ -84,6 +84,7 @@ const schools = [
           <a href="https://inertiajs.com/" target="_blank"><img src="@/assets/logos/inertiajs.png" alt="" class="w-14"></a>
           <a href="https://alpinejs.dev" target="_blank"><img src="@/assets/logos/alpine.svg" alt="" class="w-14"></a>
           <a href="https://nuxt.com" target="_blank"><img src="@/assets/logos/nuxt.png" alt="" class="w-14"></a>
+          <a href="https://www.python.org" target="_blank"><img src="@/assets/logos/python.png" alt="" class="w-14"></a>
         </div>
       </div>
     </div>

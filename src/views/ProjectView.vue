@@ -1,6 +1,35 @@
 <script setup lang="ts">
 const projects = [
-{
+    {
+        image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/wellbeing.png",
+        link: "https://github.com/ab-azmi/alifia_app",
+        name: "UNNES Wellbeing",
+        meta: "for a Client - 2024",
+        description: "This is a project that i made for a client. It is a web app that can help students to find a psychologist and made an appointment. I use Laravel as back end, Livewire as front end, and TailwindCSS for styling. I also use Pusher for real time chat. I made this project alone within 4 and a half weeks. It was a great experience. In this project i learn a lot about Websocket and Alpine JS.",
+        tools: [
+            {
+                name: "Laravel",
+                color: "red"
+            },
+            {
+                name: "Livewire",
+                color: "pink",
+            },
+            {
+                name: "TailwindCSS",
+                color: "blue"
+            },
+            {
+                name: "Alpine JS",
+                color: "green"
+            },
+            {
+                name: "Pusher",
+                color: "gray"
+            },
+        ]
+    },
+    {
         image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/pawra.png",
         link: "https://github.com/pawra-id",
         name: "PAWRA (Pet Anxiety and Welfare Robust Analyzer)",
@@ -151,11 +180,13 @@ const projects = [
                 class="w-full flex flex-col rounded-lg bg-white/20 backdrop-blur-md h-fit">
                 <div class="p-5 rounded-t-lg">
                     <div class="overflow-hidden w-full rounded-lg h-52">
-                        <img :src="project.image" :alt="project.name"/>
+                        <img class="object-cover w-full h-full" :src="project.image" :alt="project.name" />
                     </div>
                 </div>
                 <div class=" px-5">
-                    <a target="_blank" :href="project.link" class="text-white text-lg font-semibold hover:text-display transition-colors">{{ project.name }} &rarr;</a>
+                    <a target="_blank" :href="project.link"
+                        class="text-white text-lg font-semibold hover:text-display transition-colors">{{ project.name }}
+                        &rarr;</a>
                     <p class="italic text-sm text-white/30">{{ project.meta }}</p>
                     <p class="text-sm text-white mt-3">
                         {{ project.description }}
@@ -165,11 +196,9 @@ const projects = [
                     <span v-for="tool in project.tools" :key="tool.name"
                         :class="tool.color == 'red' ? 'bg-red-300 text-red-900' : tool.color == 'blue' ? 'bg-blue-300 text-blue-900' : tool.color == 'green' ? 'bg-green-300 text-green-900' : tool.color == 'purple' ? 'bg-purple-300 text-purple-900' : tool.color == 'orange' ? 'bg-orange-300 text-orange-900' : tool.color == 'pink' ? 'bg-pink-300 text-pink-900' : tool.color == 'gray' ? 'bg-gray-300 text-gray-900' : ''"
                         class="inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium">
-                        <svg 
-                            class="h-1.5 w-1.5" 
+                        <svg class="h-1.5 w-1.5"
                             :class="tool.color == 'red' ? 'fill-red-900' : tool.color == 'blue' ? 'fill-blue-900' : tool.color == 'green' ? 'fill-green-900' : tool.color == 'purple' ? 'fill-purple-900' : tool.color == 'orange' ? 'fill-orange-900' : tool.color == 'pink' ? 'fill-pink-900' : tool.color == 'gray' ? 'fill-gray-900' : ''"
-                            viewBox="0 0 6 6"
-                            aria-hidden="true">
+                            viewBox="0 0 6 6" aria-hidden="true">
                             <circle cx="3" cy="3" r="3" />
                         </svg>
                         {{ tool.name }}
