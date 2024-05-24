@@ -104,6 +104,10 @@ const projects = [
             {
                 name: "Git",
                 color: "orange"
+            },
+            {
+                name: "JQuery",
+                color: "green"
             }
         ]
     }, {
@@ -153,11 +157,15 @@ const projects = [
         link: "https://dribbble.com/shots/16743976-Portfolio-Design/attachments/11790523?mode=media",
         name: "Portfolio UI Design",
         meta: "for Hobby project",
-        description: "This one is different. Back then i thought my passion is UI/UX, so i made this and post in on dribble. Later i found out that coding is more fun and challenging. So i shift toward web development. I can still designing, but not in advance level.",
+        description: "This one is different. Back then i thought my passion was UI/UX, so i made this and posted in on dribble. Later i found out that coding was more fun and challenging. So i shifted toward web development. I can still designing, but not in advanced level.",
         tools: [
             {
                 name: "VueJS",
                 color: "green"
+            },
+            {
+                name: "Typescript",
+                color: "gray"
             },
             {
                 name: "TailwindCSS",
@@ -165,7 +173,7 @@ const projects = [
             },
             {
                 name: "Figma",
-                color: "gray"
+                color: "purple"
             },
         ]
     }

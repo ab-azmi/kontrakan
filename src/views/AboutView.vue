@@ -10,7 +10,7 @@ const schools = [
     name: { name: 'Universitas Negeri Semarang', href: '#' },
     icon: AcademicCapIcon,
     description:
-      'Finally, i go to college, in another city. My major is Computer Science but my focus area is Web Developer. I met new freinds and teachers. They are so smart and motivated, unlike me lazy. In colleges i was able to join multiple internship program as a Web Developer. I was so grateful',
+      'Finally, i go to college, in another city. My major is Computer Science but my focus area is Web Developer. I met new freinds and teachers. They are so smart and motivated, unlike me lazy. In college i was able to join multiple internship program as a Web Developer. I was so grateful',
     period: '2020 - present'
   },
   {
@@ -24,7 +24,7 @@ const schools = [
     name: { name: 'SMK Negeri 1 Wonosobo', href: '#' },
     icon: CommandLineIcon,
     description:
-      'High school. Finally i decided to leave that jungle and go to the city across the sea. I was accepted in a great Vocational High School, majoring Software Engineering. My close friends was small, only 3 or 4. I learn a lot from my teachers and friends. I was happy but sometimes got depressed too, teenage problem',
+      'My first experience in programming. I was so happy and proud of my self. I was able to learn a lot of things, not only programming, but also a bit of networking and multimedia. I learn a lot of things from my teachers and friends.',
     period: '2017 - 2020'
   },
 ]
