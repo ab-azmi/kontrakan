@@ -41,6 +41,10 @@ const projects = [
                 color: "gray"
             },
             {
+                name: "Docker",
+                color: "red"
+            },
+            {
                 name: "Nuxt JS",
                 color: "green",
             },
