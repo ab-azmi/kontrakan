@@ -1,5 +1,30 @@
 <script setup lang="ts">
 const projects = [
+{
+        image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/skripsi.png?t=2024-08-11T15%3A00%3A50.365Z",
+        link: "https://github.com/ab-azmi/alifia_app",
+        name: "Panduan Skripsi & Wisuda",
+        meta: "for Voluntary Project- 2024",
+        description: "This is a project that i made voluntarily for my friends who are struggling with their final project. It is a web app that can guide them through the complox process of making Skripsi and prepare for Wisuda. I use NextJS as front end, ShadCN-UI as component library, TailwindCSS for styling, and React-hook-form for form handling. I made this project alone within 2 weeks. It was a great experience.",
+        tools: [
+            {
+                name: "NextJS",
+                color: "green"
+            },
+            {
+                name: "ShadCN-UI",
+                color: "gray",
+            },
+            {
+                name: "TailwindCSS",
+                color: "blue"
+            },
+            {
+                name: "React-hook-form",
+                color: "pink"
+            },
+        ]
+    },
     {
         image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/wellbeing.png",
         link: "https://github.com/ab-azmi/alifia_app",

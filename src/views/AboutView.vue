@@ -11,7 +11,7 @@ const schools = [
     icon: AcademicCapIcon,
     description:
       'Finally, i go to college, in another city. My major is Computer Science but my focus area is Web Developer. I met new freinds and teachers. They are so smart and motivated, unlike me lazy. In college i was able to join multiple internship program as a Web Developer. I was so grateful',
-    period: '2020 - present'
+    period: '2020 - 2024'
   },
   {
     name: { name: 'Bangkit Academy by Google, GoTo, & Traveloka', href: '#' },
