@@ -2,8 +2,8 @@
 const projects = [
     {
         image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/next_ecomerce.png",
-        link: "https://github.com/ab-azmi/alifia_app",
-        name: "Next.JS E-Commerce (Single tenant)",
+        link: "https://github.com/ab-azmi/learn_next_drizzle/tree/xendit",
+        name: "NextJs 14 E-Commerce (Single tenant)",
         meta: "for Hobby Project- 2024",
         description: "This is a project that i made in order to learn about NextJS ecosystem. It is a single tenant e-commerce web app that can handle user authentication, product management, and order management. I use Xendit for payment gateway and Algolia for search engine.",
         tools: [
