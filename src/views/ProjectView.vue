@@ -1,6 +1,63 @@
 <script setup lang="ts">
 const projects = [
-{
+    {
+        image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/next_ecomerce.png",
+        link: "https://github.com/ab-azmi/alifia_app",
+        name: "Next.JS E-Commerce (Single tenant)",
+        meta: "for Hobby Project- 2024",
+        description: "This is a project that i made in order to learn about NextJS ecosystem. It is a single tenant e-commerce web app that can handle user authentication, product management, and order management. I use Xendit for payment gateway and Algolia for search engine.",
+        tools: [
+            {
+                name: "NextJS",
+                color: "green"
+            },
+            {
+                name: "ShadCN-UI",
+                color: "gray",
+            },
+            {
+                name: "Zustand",
+                color: "blue"
+            },
+            {
+                name: "React-hook-form",
+                color: "pink"
+            },
+            {
+                name: "Next Auth",
+                color: "orange"
+            },
+            {
+                name: "Algolia",
+                color: "gray"
+            },
+            {
+                name: "Uploadthing",
+                color: "red"
+            },
+            {
+                name: "Resend",
+                color: "green"
+            },
+            {
+                name: "Recharts",
+                color: "blue"
+            },
+            {
+                name: "Drizzle-ORM",
+                color: "orange"
+            },
+            {
+                name: "Tiptap",
+                color: "gray"
+            },
+            {
+                name: "Xendit",
+                color: "purple"
+            },
+        ]
+    },
+    {
         image: "https://ikzkefhtqowmydzcgjmy.supabase.co/storage/v1/object/public/images/projects/skripsi.png?t=2024-08-11T15%3A00%3A50.365Z",
         link: "https://github.com/ab-azmi/alifia_app",
         name: "Panduan Skripsi & Wisuda",
